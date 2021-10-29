@@ -66,7 +66,7 @@ print('A = ' + str(B) + "\n")
 Entries.check_weights()
 
 from Simple_Eqn_finder_1_OOP import SQR,ADD2,SUB2,PW2,MUL2,DIV2 # This line is needed as these variables are set global in 
-                                                                     # the 'update' function in Simple_Eqn_finder_1_IMPROVED.py
+                                                                     # the 'update' function in Simple_Eqn_finder_1_OOP.py
                                                                      # and therefore the same variables in Variables.py are not updated
 if len(B)-2 == SQR:
     Entries.print('SQR')
