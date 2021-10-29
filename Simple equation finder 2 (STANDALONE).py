@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[ ]:
-
+# THE FOLLOWING ALGORITHM HAS BUGS AND IS EXTREMELY INEFFICIENT. (WORK IN PROGRESS)
 
 get_ipython().run_line_magic('matplotlib', 'notebook')
 import matplotlib as mpl
@@ -34,7 +34,7 @@ print('\n' + str(A))
 # In[ ]:
 
 
-# Possibly need a ML algorith here to narrow down the possible equations by looking at the graph of the inputs
+# Possibly need a ML algorith here to narrow down the possible equations by looking at the graph of the inputs. (This could be misleading)
 
 
 # In[ ]:
@@ -162,7 +162,7 @@ print(len(B3),'\n',len(B4))
 for i in range(len(B4)):
     for j in range(len(B4)):
         try:
-            if B4[i] == B4[j]: # ************ NOT POSSIBLE because there are too many duplicate results to remove. Fix the code above and retry
+            if B4[i] == B4[j]: # ************ NOT POSSIBLE because there are too many duplicate results to remove. Fix the code above.
                 print(B4[j])
                 B4.remove(B4[j])
         except IndexError as error:
@@ -172,7 +172,6 @@ for i in range(len(B4)):
 # In[ ]:
 
 
-# ************ Make a function of if statement that deletes all duplicate results
 print(len(B4),len(B3))
 
 
@@ -188,7 +187,7 @@ for o in range(len(functions)):
                         if A[i+1] == functions[o](B3[k][h],B3[k][m]): # and A[i+2] == functions[o](B4[0][h],B4[0][m]):
                             # Output from here will be ~174 trillion results (unless duplicates are removed - however this could result in the loss of the true equation)
                             # 174 trillion results would take 100+ million minutes (250 years) to compute in python, 300+ (230 days) thousand minutes in C++
-                            # Therefore I need to implement a ML neural net to decrease the number of results and keep the computing fast - i.e. simple trend detection CNN looking at the graph of the inputs
+                            # Maybe a ML neural net could decrease the number of results and keep the computing fast - i.e. simple trend detection CNN looking at the graph of the inputs
                             print(str(A[i]) + '  ' + str(A[i+1])  + '  ' + functions[j].__name__ + '  ' + str(list1[z]) + '  ' + functions[o].__name__ + '  ' + str(list1[v]) + '\n')
                     except ZeroDivisionError as error:
                         break
@@ -203,7 +202,7 @@ for o in range(len(functions)):
 
 # ********* One implementation of machine learning is to plot the dataset using 'y' as x[i+1] and 'x' as x[i]
           # and run the neural net with filters from graphs set as x^2, x^3, x+2, etc.
-          # This would speed up the process significantly
+          # This would speed up the process significantly **********
 
 
 # def fermi(E: float,T: float) -> float:
