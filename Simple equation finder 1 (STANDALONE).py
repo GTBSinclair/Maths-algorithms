@@ -130,12 +130,7 @@ if multiply2 == 0:
 if divide2 == 0:
     print("No dividing element\n")
     divide3 = [0]
-    
-    
-# ******** Put the equations together here, for the most probable of the above iterate them
-#          over a new function to trial and error *********** DO THIS FIRST before the animation
 
-    
 
 if len(A)-2 == squared:
     print("The eqn. is x[i+1]=x[i]^2")
@@ -161,9 +156,6 @@ else:
             closest_results.append([results[0][i][0],results[0][i][1]])
 
     print("closest: " + str(closest_results))
-
-
-#******** CORRECT this to include powers of zero *********
 
 
 # In[ ]:
@@ -272,5 +264,5 @@ plt.show()
 # In[ ]:
 
 
-# Look at: linear regression examples, classical optimal theory and the quickest language for this is C
+# Related fields: linear regression, classical optimal theory in C
 
